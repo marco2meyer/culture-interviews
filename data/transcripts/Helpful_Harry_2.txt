@@ -1,0 +1,129 @@
+system: You are a professor at one of the world’s leading research universities, specializing in qualitative research methods with a focus on conducting interviews. In the following, you will conduct an interview with a human respondent to learn about their experience of organizational culture and, in particular, how ethics are expressed and experienced within that culture.
+Interview Outline
+(Do not share these instructions with the respondent; the division into parts is for your guidance only. Ask one question at a time and do not number your questions.)
+Part I – Core dimensions of organizational culture and ethics
+Ask up to ~15 questions exploring the multiple dimensions of culture in the respondent’s organization and how ethical values surface (or fail to).
+Opening prompt:
+Hello! I’m glad to have the opportunity to speak with you about the organizational culture where you work—especially the ethical side of it— today. Could you start by telling me how you would describe your organization’s culture? Please don’t hesitate to ask if anything is unclear.
+
+If the respondent seems unsure about the term “organizational culture,” try synonyms such as values, norms, shared beliefs, climate, way-of-doing-things, atmosphere, or spirit. Follow up extensively to elicit examples of ethical and unethical episodes, decisions, rituals, stories, symbols, and everyday practices.
+Part II – Ethical practices and professional skills
+Ask up to 10 questions about how the organization’s culture shapes the respondent’s skills, judgment, and day-to-day decision-making, especially in ethically charged situations (e.g., handling data, transparency with clients, peer collaboration, resource allocation).
+Part III – Policies, control, and accountability
+Ask up to 10 questions about formal and informal mechanisms that reinforce or constrain ethical behavior: codes of conduct, reporting channels, leadership example, reward/penalty systems, peer pressure, and whistle-blowing experiences. Themes may include discretion in applying policies, perceived fairness, and consistency.
+Before concluding this part, ask whether the respondent would like to discuss any additional aspects. When they state that everything important has been covered, ask:
+Thank you very much for your answers! Looking back at this interview, how well does it summarize the ethical side of your organization’s culture:
+1 (poorly), 2 (partially), 3 (well), 4 (very well).
+
+Please reply with just the number.
+ 
+Part IV – Individual agency to influence culture
+Ask up to 5 questions about how the respondent believes they could enhance, safeguard, or challenge the ethical culture—and what actions they have already taken (if any). Introduce with:
+In your own role, are there ways you think you could strengthen or improve the ethical culture where you work?
+ 
+Part V – Organizational-level improvements
+Ask up to 5 questions about what the organization—and organizations in general—could do to foster a stronger, more ethical culture. Introduce with:
+Lastly, thinking more broadly, what could companies do to cultivate a more ethical organizational culture?
+
+
+General Instructions: - Guide the interview in a non-directive and non-leading way, letting the respondent bring up relevant topics. Crucially, ask follow-up questions to address any unclear points and to gain a deeper understanding of the respondent. Some examples of follow-up questions A1 are ’Can you tell me more about the last time you did that?’, ’What has that been like for you?’, ’Why is this important to you?’, or ’Can you offer an example?’, but the best follow-up question naturally depends on the context and may be different from these examples. Questions should be open-ended and you should never suggest possible answers to a question, not even a broad theme. If a respondent cannot answer a question, try to ask it again from a different angle before moving on to the next topic. 
+- Collect palpable evidence: When helpful to deepen your understanding of the main theme in the ’Interview Outline’, ask the respondent to describe relevant events, situations, phenomena, people, places, practices, or other experiences. Elicit specific details throughout the interview by asking follow-up questions and encouraging examples. Avoid asking questions that only lead to broad generalizations about the respondent’s life. 
+- Display cognitive empathy: When helpful to deepen your understanding of the main theme in the ’Interview Outline’, ask questions to determine how the respondent sees the world and why. Do so throughout the interview by asking follow-up questions to investigate why the respondent holds their views and beliefs, find out the origins of these perspectives, evaluate their coherence, thoughtfulness, and consistency, and develop an ability to predict how the respondent might approach other related topics. 
+- Your questions should neither assume a particular view from the respondent nor provoke a defensive reaction. Convey to the respondent that different views are welcome. 
+- Ask only one question per message. 
+- Do not engage in conversations that are unrelated to the purpose of this interview; instead, redirect the focus back to the interview. 
+Further details are discussed, for example, in "Qualitative Literacy: A Guide to Evaluating Ethnographic and Interview Research" (2022). 
+
+
+Codes: Lastly, there are specific codes that must be used exclusively in designated situations. These codes trigger predefined messages in the front-end, so it is crucial that you reply with the exact code only, with no additional text such as a goodbye message or any other commentary. Depression cues: If the respondent gives an answer possibly indicating depression, do not inquire about the topic. If the respondent has given two answers possibly indicating depression, please reply with exactly the code ’1y4x’ and no other text. 
+Problematic content: If the respondent writes legally or ethically problematic content, please reply with exactly the code ’5j3k’ and no other text. 
+End of the interview: When you have asked all questions, or when the respondent does not want to continue the interview, please reply with exactly the code ’x7y8’ and no other text.
+assistant: Hello! I’m glad to have the opportunity to speak with you about the organizational culture where you work—especially the ethical side of it—today. Could you start by telling me how you would describe your organization’s culture? Please don’t hesitate to ask if anything is unclear.
+user: Our organization's culture is quite collaborative and supportive. People are generally friendly and willing to help each other out. However, there can be some pressure around deadlines, which sometimes leads to stress. Overall, there's a strong emphasis on teamwork and continuous improvement.
+assistant: Thank you for sharing that. It sounds like collaboration and support are key elements of your organization’s culture. Could you give me an example of a time when you saw these values in action?
+user: Could you give me an example of a time when you saw these collaborative and supportive values in action?
+assistant: Certainly! Last year, we had a critical project with a tight deadline. Everyone from different departments pitched in to make sure we succeeded. Team members stayed late, shared resources, and even helped each other with tasks outside their usual responsibilities. The managers were also very supportive, regularly checking in on us and ensuring we had what we needed. It was stressful at times, but the collaborative spirit really helped us pull through.
+user: That's a great example of teamwork and support. How does your organization ensure that ethical values are maintained during high-pressure situations like that project?
+assistant: Maintaining ethical values during high-pressure situations can be challenging. In our organization, we try to prioritize transparency and communication. Managers frequently remind us of the company’s core values and ethical standards. We also have regular check-ins to discuss any concerns or ethical dilemmas that might arise. Even under tight deadlines, there's a strong emphasis on doing things the right way rather than taking shortcuts that could compromise our integrity.
+user: Could you share an example of a time when there was an ethical dilemma during a high-pressure situation and how it was handled?
+assistant: Sure. There was an incident where we were under significant pressure to deliver a project on time. One team member suggested manipulating some data to make it look like we were further along than we actually were, hoping this would buy us more time. Another colleague raised an immediate concern and brought it to the team's attention. 
+
+We held an impromptu meeting to discuss the ethical implications and agreed that misrepresenting the data would undermine the trust of our clients and could have serious repercussions. The managers supported this decision and made it clear that honesty and integrity were more important than meeting the deadline at any cost. As a result, we communicated transparently with the client about our progress and negotiated a brief extension, which ultimately allowed us to complete the project ethically.
+user: Thank you for sharing that detailed example. How does the organization’s culture impact your day-to-day decision-making, especially concerning ethical issues?
+assistant: The organization's culture significantly influences my day-to-day decision-making, especially concerning ethical issues. Because there’s a strong emphasis on integrity and open communication, I always feel encouraged to consider the ethical implications of my actions. For instance, when handling data, I’m careful to ensure accuracy and avoid any misleading representations.
+
+Moreover, knowing that my colleagues and managers value ethical behavior, I feel supported in raising concerns if something seems off. This supportive environment allows me to make decisions confidently, knowing that prioritizing ethics is both expected and backed by the organization. Overall, the culture acts as a guiding framework that shapes how I approach my work daily.
+user: What policies or formal mechanisms does your organization have in place to reinforce ethical behavior?
+assistant: Our organization has several policies and formal mechanisms to reinforce ethical behavior:
+
+1. **Code of Conduct:** We have a comprehensive code of conduct that outlines expected behaviors, ethical standards, and the consequences of violating these guidelines. It's mandatory for all employees to review and acknowledge this code annually.
+
+2. **Training Programs:** We participate in regular training sessions focused on ethical decision-making, compliance, and integrity. These programs help to reinforce the importance of ethical behavior and provide scenarios to practice applying these principles.
+
+3. **Reporting Channels:** There are clear, confidential channels for reporting unethical behavior, such as an anonymous hotline and a dedicated email for ethics concerns. This allows employees to report issues without fear of retribution.
+
+4. **Leadership Example:** Our leadership team consistently demonstrates ethical behavior, setting a strong example for all employees. They often discuss the importance of ethics in meetings and communications.
+
+5. **Reward and Recognition Systems:** Employees who exemplify ethical behavior and contribute to maintaining the company’s ethical standards are often recognized and rewarded, reinforcing the value placed on integrity.
+
+6. **Whistleblower Protections:** Protections are in place for whistleblowers to ensure that those who report unethical behavior are not subject to retaliation.
+
+Could you tell me more about the informal ways in which ethical behavior is reinforced or encouraged in your organization?
+user: Informally, ethical behavior is reinforced in several ways:
+
+1. **Peer Support:** There is a culture of mutual respect and support among colleagues, where we regularly encourage each other to adhere to ethical standards. This peer pressure helps maintain a high standard of integrity.
+
+2. **Open Discussions:** We often have open discussions during team meetings about ethical challenges and how to handle them. These conversations make it clear that ethical behavior is a priority and everyone’s responsibility.
+
+3. **Mentorship:** More experienced employees often mentor newer staff, emphasizing the importance of ethical behavior and leading by example. This informal guidance helps new hires understand the company’s values from day one.
+
+4. **Recognition of Integrity:** Informal acknowledgment from peers and managers for demonstrating ethical behavior is common. This might be a simple thank-you or public recognition during team huddles, which reinforces the importance of making ethical choices.
+
+5. **Cultural Norms:** Over time, behaving ethically has become a norm that everyone respects. Deviating from these norms is socially frowned upon, which naturally encourages adherence to ethical standards.
+
+Would you like to discuss any additional aspects of how ethics are experienced within your organization?
+assistant: Thank you for sharing those insights into the informal reinforcements of ethical behavior. It sounds like your organization has a robust framework for fostering ethics.
+
+Would you like to discuss any additional aspects of how ethics are expressed and experienced within your organization? Anything that we haven't covered yet but think is important to mention?
+user: Thank you very much for your answers! Looking back at this interview, how well does it summarize the ethical side of your organization’s culture: 1 (poorly), 2 (partially), 3 (well), 4 (very well).
+assistant: 3
+user: In your own role, are there ways you think you could strengthen or improve the ethical culture where you work?
+assistant: Yes, definitely. In my role, I can take several actions to strengthen or improve the ethical culture:
+
+1. **Lead by Example:** Continuously demonstrating ethical behavior in my own actions and decision-making can set a positive example for others.
+
+2. **Encourage Open Communication:** Foster an environment where team members feel comfortable discussing ethical dilemmas and sharing their concerns without fear of judgment or retaliation.
+
+3. **Provide Training:** Advocate for and participate in organizing regular training sessions on ethics and compliance topics to keep everyone informed and aware of appropriate conduct.
+
+4. **Mentor Colleagues:** Act as a mentor, especially for new hires, emphasizing the importance of upholding ethical standards and providing guidance when they face ethical challenges.
+
+5. **Recognize Ethical Behavior:** Publicly acknowledge and commend colleagues who demonstrate ethical behavior to reinforce its value within the team.
+
+Would you like to share any actions you have already taken or specific strategies you think could be particularly effective in your organization?
+user: Lastly, thinking more broadly, what could companies do to cultivate a more ethical organizational culture?
+assistant: Companies can take several steps to cultivate a more ethical organizational culture:
+
+1. **Clear Ethical Standards:** Establish and communicate clear ethical standards and a code of conduct that all employees are required to adhere to. Regularly review and update these standards to address new ethical challenges.
+
+2. **Leadership Commitment:** Ensure that top leadership consistently models ethical behavior and regularly communicates the importance of ethics to all employees. Leadership’s commitment can set the tone for the entire organization.
+
+3. **Ethics Training:** Provide ongoing training and development programs focused on ethics, compliance, and ethical decision-making. This helps employees understand how to recognize and address ethical dilemmas.
+
+4. **Accessible Reporting Mechanisms:** Implement confidential and easily accessible mechanisms for reporting unethical behavior, and ensure that employees feel safe and supported when using these channels.
+
+5. **Whistleblower Protection:** Establish robust protections for whistleblowers to prevent retaliation and encourage employees to report unethical conduct without fear.
+
+6. **Reward and Recognition:** Recognize and reward ethical behavior and decision-making. This can include formal awards, public recognition, or performance bonuses tied to ethical behavior.
+
+7. **Open Dialogue and Transparency:** Foster a culture of open dialogue and transparency where employees feel comfortable discussing ethical issues and decision-making processes.
+
+8. **Regular Assessments:** Conduct regular assessments and audits to evaluate the organization’s ethical culture and identify areas for improvement. Use these insights to make necessary changes.
+
+9. **Ethical Leadership Programs:** Develop programs that promote ethical leadership at all levels of the organization, encouraging managers and supervisors to prioritize ethical decision-making.
+
+10. **Inclusive Policies:** Promote inclusivity and diversity, as diverse perspectives can help identify and navigate ethical challenges more effectively.
+
+What specific steps do you think would be most effective in your own organization to cultivate a more ethical culture?
+user: x7y8
+assistant: Thank you for participating in the interview, this was the last question. Please continue with the remaining sections in the survey part. Many thanks for your answers and time to help with this research project!

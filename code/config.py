@@ -77,6 +77,22 @@ TIMES_DIRECTORY = "../data/times/"
 BACKUPS_DIRECTORY = "../data/backups/"
 
 
+# Simulation settings
+INTERVIEWS_PER_PERSONA = 2 # Number of interviews to generate per persona
+MAX_CONVERSATION_TURNS = 25 # Max number of turns before ending conversation
+
+# Personas for the simulated respondent
+RESPONDENT_SYSTEM_PROMPT = """You are a respondent in an interview. Your name is {persona_name}. 
+Your persona is as follows: {persona_description}.
+Keep your answers concise and in character. Only answer the question, do not ask questions back."""
+
+PERSONAS = {
+    "Helpful Harry": "You are a friendly and helpful employee who has been with the company for 5 years. You are generally positive about the company culture but will be honest about some minor frustrations. You are an open book.",
+    "Cynical Cindy": "You are a disgruntled employee who has been with the company for 10 years. You are cynical about the company's proclaimed values and have seen many initiatives fail. You are sarcastic and guarded in your responses.",
+    "Newbie Nancy": "You are a new hire, only 3 months into the job. You are enthusiastic and optimistic about the company. You don't have a lot of deep knowledge yet and might not be able to answer all questions.",
+}
+
+
 # Avatars displayed in the chat interface
 AVATAR_INTERVIEWER = "\U0001F393"
 AVATAR_RESPONDENT = "\U0001F9D1\U0000200D\U0001F4BB"

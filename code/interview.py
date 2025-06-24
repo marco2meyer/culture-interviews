@@ -103,6 +103,8 @@ with col2:
             st.session_state.username,
             config.TRANSCRIPTS_DIRECTORY,
             config.TIMES_DIRECTORY,
+            st.session_state.messages,
+            st.session_state.start_time,
         )
 
 
@@ -168,6 +170,8 @@ if not st.session_state.messages:
         username=st.session_state.username,
         transcripts_directory=config.BACKUPS_DIRECTORY,
         times_directory=config.BACKUPS_DIRECTORY,
+        messages=st.session_state.messages,
+        start_time=st.session_state.start_time,
         file_name_addition_transcript=f"_transcript_started_{st.session_state.start_time_file_names}",
         file_name_addition_time=f"_time_started_{st.session_state.start_time_file_names}",
     )
@@ -251,6 +255,8 @@ if st.session_state.interview_active:
                         username=st.session_state.username,
                         transcripts_directory=config.BACKUPS_DIRECTORY,
                         times_directory=config.BACKUPS_DIRECTORY,
+                        messages=st.session_state.messages,
+                        start_time=st.session_state.start_time,
                         file_name_addition_transcript=f"_transcript_started_{st.session_state.start_time_file_names}",
                         file_name_addition_time=f"_time_started_{st.session_state.start_time_file_names}",
                     )
@@ -285,6 +291,8 @@ if st.session_state.interview_active:
                             username=st.session_state.username,
                             transcripts_directory=config.TRANSCRIPTS_DIRECTORY,
                             times_directory=config.TIMES_DIRECTORY,
+                            messages=st.session_state.messages,
+                            start_time=st.session_state.start_time,
                         )
 
                         final_transcript_stored = check_if_interview_completed(

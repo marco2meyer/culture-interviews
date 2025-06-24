@@ -1,5 +1,4 @@
-import streamlit as st
-import hmac
+
 import time
 import os
 
@@ -63,6 +62,8 @@ def save_interview_data(
     username,
     transcripts_directory,
     times_directory,
+    messages,
+    start_time,
     file_name_addition_transcript="",
     file_name_addition_time="",
 ):
@@ -75,7 +76,7 @@ def save_interview_data(
         ),
         "w",
     ) as t:
-        for message in st.session_state.messages:
+        for message in messages:
             t.write(f"{message['role']}: {message['content']}\n")
 
     # Store file with start time and duration of interview
@@ -83,7 +84,7 @@ def save_interview_data(
         os.path.join(times_directory, f"{username}{file_name_addition_time}.txt"),
         "w",
     ) as d:
-        duration = (time.time() - st.session_state.start_time) / 60
+        duration = (time.time() - start_time) / 60
         d.write(
-            f"Start time (UTC): {time.strftime('%d/%m/%Y %H:%M:%S', time.localtime(st.session_state.start_time))}\nInterview duration (minutes): {duration:.2f}"
+            f"Start time (UTC): {time.strftime('%d/%m/%Y %H:%M:%S', time.localtime(start_time))}\nInterview duration (minutes): {duration:.2f}"
         )
