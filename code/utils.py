@@ -36,7 +36,7 @@ def check_password():
     login_form()
     if "password_correct" in st.session_state:
         st.error("User or password incorrect")
-    return False, st.session_state.username
+    return False, None
 
 
 def check_if_interview_completed(directory, username):
@@ -70,18 +70,22 @@ def save_interview_data(
     """Write interview data (transcript and time) to disk."""
 
     # Store chat transcript
+    transcript_path = os.path.join(
+        transcripts_directory, f"{username}{file_name_addition_transcript}.txt"
+    )
+    print(f"Saving transcript to: {transcript_path}")
     with open(
-        os.path.join(
-            transcripts_directory, f"{username}{file_name_addition_transcript}.txt"
-        ),
+        transcript_path,
         "w",
     ) as t:
         for message in messages:
             t.write(f"{message['role']}: {message['content']}\n")
 
     # Store file with start time and duration of interview
+    time_path = os.path.join(times_directory, f"{username}{file_name_addition_time}.txt")
+    print(f"Saving time data to: {time_path}")
     with open(
-        os.path.join(times_directory, f"{username}{file_name_addition_time}.txt"),
+        time_path,
         "w",
     ) as d:
         duration = (time.time() - start_time) / 60

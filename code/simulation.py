@@ -39,14 +39,23 @@ if api == "openai":
         print("Error: API_KEY_OPENAI not found in secrets.toml")
         exit()
     client = OpenAI(api_key=openai_api_key)
-    # Note: Stream is not used in this simulation script but kept for potential future use
-    api_kwargs = {"stream": False}
 elif api == "anthropic":
     if not anthropic_api_key:
         print("Error: API_KEY_ANTHROPIC not found in secrets.toml")
         exit()
     client = anthropic.Anthropic(api_key=anthropic_api_key)
-    api_kwargs = {}
+
+def call_api_with_retry(api_call_func, *args, **kwargs):
+    """Calls an API function with a retry mechanism for rate limit errors."""
+    retry_delays = [1, 10, 30]
+    for i, delay in enumerate(retry_delays):
+        try:
+            return api_call_func(*args, **kwargs)
+        except (anthropic.RateLimitError, openai.RateLimitError) as e:
+            print(f"Rate limit exceeded. Retrying in {delay} seconds... (Attempt {i + 1}/{len(retry_delays)})")
+            time.sleep(delay)
+    print("API call failed after multiple retries. Terminating interview.")
+    return None
 
 
 def run_simulation():
@@ -78,27 +87,32 @@ def run_simulation():
             # Start with the interviewer's opening message
             if api == "openai":
                 messages.append({"role": "system", "content": config.SYSTEM_PROMPT})
-                completion = client.chat.completions.create(
+                completion = call_api_with_retry(
+                    client.chat.completions.create,
                     messages=messages,
                     model=config.MODEL,
                     max_tokens=config.MAX_OUTPUT_TOKENS,
                     temperature=config.TEMPERATURE,
                 )
-                message_interviewer = completion.choices[0].message.content
+                message_interviewer = completion.choices[0].message.content if completion else None
             elif api == "anthropic":
                 messages.append({"role": "user", "content": "Hi"})
-                response = client.messages.create(
+                response = call_api_with_retry(
+                    client.messages.create,
                     system=config.SYSTEM_PROMPT,
                     messages=messages,
                     model=config.MODEL,
                     max_tokens=config.MAX_OUTPUT_TOKENS,
                     temperature=config.TEMPERATURE,
                 )
-                message_interviewer = response.content[0].text
+                message_interviewer = response.content[0].text if response else None
 
-            messages.append({"role": "assistant", "content": message_interviewer})
-            print(f"    Interviewer: {message_interviewer}")
-            time.sleep(1)  # Delay to avoid rate limiting
+            if message_interviewer is None:
+                interview_active = False
+                messages.append({"role": "assistant", "content": "Interview terminated due to API rate limits."})
+            else:
+                messages.append({"role": "assistant", "content": message_interviewer})
+                print(f"    Interviewer: {message_interviewer}")
 
             # Main conversation loop
             while interview_active and conversation_turn < config.MAX_CONVERSATION_TURNS:
@@ -110,50 +124,59 @@ def run_simulation():
                 )
                 if api == "openai":
                     respondent_messages = messages.copy()
-                    respondent_messages.insert(0, {"role": "system", "content": respondent_system_prompt})
-                    completion = client.chat.completions.create(
+                    respondent_messages[0] = {"role": "system", "content": respondent_system_prompt}
+                    completion = call_api_with_retry(
+                        client.chat.completions.create,
                         messages=respondent_messages,
                         model=config.MODEL,
                         max_tokens=config.MAX_OUTPUT_TOKENS,
                         temperature=config.TEMPERATURE,
                     )
-                    message_respondent = completion.choices[0].message.content
+                    message_respondent = completion.choices[0].message.content if completion else None
                 elif api == "anthropic":
-                    response = client.messages.create(
+                    response = call_api_with_retry(
+                        client.messages.create,
                         system=respondent_system_prompt,
                         messages=messages,
                         model=config.MODEL,
                         max_tokens=config.MAX_OUTPUT_TOKENS,
                         temperature=config.TEMPERATURE,
                     )
-                    message_respondent = response.content[0].text
+                    message_respondent = response.content[0].text if response else None
                 
-                messages.append({"role": "user", "content": message_respondent})
-                print(f"    {persona_name}: {message_respondent}")
-                time.sleep(1)  # Delay to avoid rate limiting
+                if message_respondent is None:
+                    interview_active = False
+                    messages.append({"role": "user", "content": "Interview terminated due to API rate limits."})
+                else:
+                    messages.append({"role": "user", "content": message_respondent})
+                    print(f"    {persona_name}: {message_respondent}")
 
                 # Interviewer's turn
                 if api == "openai":
-                    completion = client.chat.completions.create(
+                    completion = call_api_with_retry(
+                        client.chat.completions.create,
                         messages=messages,
                         model=config.MODEL,
                         max_tokens=config.MAX_OUTPUT_TOKENS,
                         temperature=config.TEMPERATURE,
                     )
-                    message_interviewer = completion.choices[0].message.content
+                    message_interviewer = completion.choices[0].message.content if completion else None
                 elif api == "anthropic":
-                    response = client.messages.create(
+                    response = call_api_with_retry(
+                        client.messages.create,
                         system=config.SYSTEM_PROMPT,
                         messages=messages,
                         model=config.MODEL,
                         max_tokens=config.MAX_OUTPUT_TOKENS,
                         temperature=config.TEMPERATURE,
                     )
-                    message_interviewer = response.content[0].text
+                    message_interviewer = response.content[0].text if response else None
 
-                time.sleep(1)  # Delay to avoid rate limiting
+                if message_interviewer is None:
+                    interview_active = False
+                    messages.append({"role": "assistant", "content": "Interview terminated due to API rate limits."})
                 # Check for closing codes
-                if any(code in message_interviewer for code in config.CLOSING_MESSAGES.keys()):
+                elif any(code in message_interviewer for code in config.CLOSING_MESSAGES.keys()):
                     interview_active = False
                     closing_code = next(code for code in config.CLOSING_MESSAGES.keys() if code in message_interviewer)
                     closing_message = config.CLOSING_MESSAGES[closing_code]
@@ -172,7 +195,6 @@ def run_simulation():
                 start_time=start_time,
             )
             print(f"  Interview {i + 1} for {persona_name} completed and saved.")
-            time.sleep(1)  # Delay between interviews
 
 if __name__ == "__main__":
     run_simulation()
