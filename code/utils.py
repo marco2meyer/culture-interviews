@@ -78,7 +78,7 @@ def save_interview_data(
         transcript_path,
         "w",
     ) as t:
-        for message in messages:
+        for message in messages[1:]:
             t.write(f"{message['role']}: {message['content']}\n")
 
     # Store file with start time and duration of interview
